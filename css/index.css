@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app{
+    width: 100vw;
+    height: 100vh;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    background: black;
+}
+.navbar{
+    width: 100vw;
+    height: 15vh;
+    border: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    color: whitesmoke;
+}
+.navbar h3{
+    font-size: 1.5rem;
+    color: gray;
+    letter-spacing: 2px;
+}
+.navbar span{
+    font-size: 2rem;
+    color: rgba(255, 55, 5, 0.848);
+    letter-spacing: 2px;
+}
+.fav-btn{
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    outline: 2px solid rgb(244, 11, 11);
+    background: transparent;
+    color: whitesmoke;
+    transition: all 0.5s ease-in-out;
+}
+.fav-btn:hover{
+    background: rgb(244, 11, 11);
+    color: whitesmoke;
+}
+.seachContainer{
+    width: 100vw;
+    height: 15vh;
+    border: 1px solid rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: whitesmoke;
+    background: gray;
+}
+.seachContainer label{
+    font-size: 1.5rem;
+    word-spacing: 1.5px;
+    letter-spacing: 1.2px;
+}
+#search{
+    width: 250px;
+    height: 35px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: none;
+    outline: 1.5px solid whitesmoke;
+    background: transparent;
+    color: whitesmoke;
+    cursor: pointer;
+    text-shadow: 0 0 10px black;
+}
+.searchList{
+    width: 60vw;
+    height: 50vh;
+    position: absolute;
+    top: 30vh;
+    left: 20vw;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.searchList::-webkit-scrollbar{
+    display: none;
+}
+.hide-search-list{
+    display: none;
+}
+
+.search-list-item{
+    width: 60vw;
+    height: auto; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.search-item-thumbnail{
+    flex: 0.15;
+}
+.search-item-thumbnail > img{
+    width: 100%;
+    height: auto;
+}
+.search-item-info{
+    flex: 0.85;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px
+}
+.search-list-item:hover{
+    background: rgb(58, 58, 58);
+}

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+}
+.navbar{
+    flex: 0.2;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.home-btn{
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    outline: 2px solid rgb(244, 11, 11);
+    background: transparent;
+    color: whitesmoke;
+    transition: all 0.5s ease-in-out;
+}
+.home-btn:hover{
+    background: rgb(244, 11, 11);
+    color: whitesmoke;
+}
+.movieContainer{
+    width: 100vw;
+    flex: 0.8;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+.movieListSlider{
+    width: 80vw;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: scroll;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.movieListSlider::-webkit-scrollbar{
+    display: none;
+}
+.movieCard{
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 180px -45px rgba(255, 51, 0, 0.5);
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+.redirect-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.movieCard:hover{
+    box-shadow: 0px 0px 150px -55px rgba(255, 51, 0, 0.5);
+    transform: scale(1.1);
+}
+.movieCard img{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.movieName{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 1300px) {
+
+    .movieListSlider{
+      height: 650px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+
+  .movieListSlider{
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+
+    .movieListSlider{
+      height: 500px;
+    }
+  }

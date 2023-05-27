@@ -1,0 +1,228 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+}
+.navbar {
+  flex: 0.2;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.home-btn,
+.fav-btn,
+.del-btn {
+  width: 140px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  outline: 2px solid rgb(244, 11, 11);
+  background: transparent;
+  color: whitesmoke;
+  transition: all 0.5s ease-in-out;
+}
+.del-btn {
+  width: 160px;
+  height: 40px;
+  display: none;
+}
+.home-btn:hover,
+.fav-btn:hover,
+.del-btn:hover {
+  background: rgb(244, 11, 11);
+  color: whitesmoke;
+}
+.movieContainer {
+  width: 100vw;
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie_card {
+  position: relative;
+  display: block;
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+.movie_card:hover {
+  transform: scale(1.02);
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+.info_section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  z-index: 20;
+  border-radius: 10px;
+}
+.movie_header {
+  position: relative;
+  padding: 25px!important;
+  height: 50%;
+  box-sizing: border-box;
+}
+.movie_header h1 {
+  color: rgb(244, 11, 11);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5rem;
+  padding: 20px;
+}
+.movie_header h2{
+  word-spacing: 1px;
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 20px;
+  width: 420px;
+}
+.movie_header h4 {
+  color: #9ac7fa;
+  font-weight: 400;
+  padding: 20px;
+  width: 420px;
+  font-size: 1.2rem;
+}
+.movie_header .minutes {
+  display: inline-block;
+  margin-top: 10px!important;
+  color: #fff;
+  padding: 5px!important;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  transform: translateX(20px);
+}
+.movie_header .type {
+  display: inline-block;
+  color: #cee4fd;
+  margin-left: 10px;
+  transform: translateX(20px);
+}
+.movie_desc {
+  padding: 25px!important;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.movie_desc .rated{
+  transform: translateX(20px);
+  width: 100px;
+  background-color: rgba(244, 11, 11, 0.8);
+  padding: 0.4rem;
+  border-radius: 3px;
+  font-weight: 600;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie_desc .text {
+  color: #cfd6e1;
+  transform: translateX(20px);
+  padding: 25px 0 20px 0;
+  box-sizing: border-box;
+  word-spacing: 1px;
+  letter-spacing: 1.5px;
+}
+.blur_back {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  right: 0;
+  background-size: cover;
+  border-radius: 11px;
+}
+
+#card {
+  box-shadow: 0px 0px 180px -45px rgba(255, 51, 0, 0.5);
+}
+#card:hover {
+    box-shadow: 0px 0px 150px -55px rgba(255, 51, 0, 0.5);
+}
+
+.card_back {
+  height: 100%;
+  /*background: url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg");*/
+  width: 60%;
+}
+.movie-poster{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 400px) {
+  body{
+    font-size: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .movie_header {
+    width: 60%;
+  }
+
+  .movie_desc {
+    width: 50%;
+  }
+
+  .info_section {
+    background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
+  }
+
+  .blur_back {
+    width: 80%;
+    background-position: -100% 10% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie_card {
+    width: 75%;
+    min-height: 350px;
+    height: 550px;
+  }
+
+  .blur_back {
+    width: 100%;
+    background-position: 50% 50% !important;
+  }
+
+  .movie_header {
+    width: 100%;
+    margin-top: 85px;
+  }
+
+  .movie_desc {
+    width: 100%;
+  }
+
+  .info_section {
+    background: linear-gradient(to top, rgb(20, 20, 19) 50%, transparent 100%);
+    display: inline-grid;
+  }
+}
