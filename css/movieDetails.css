@@ -91,14 +91,14 @@
 .movie_header h2{
   word-spacing: 1px;
   letter-spacing: 2px;
-  color: #fff;
+  color: #9ac7fa;
   font-weight: 400;
   font-size: 18px;
   padding: 20px;
   width: 420px;
 }
 .movie_header h4 {
-  color: #9ac7fa;
+  color: #fff;
   font-weight: 400;
   padding: 20px;
   width: 420px;
