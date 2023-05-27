@@ -56,7 +56,7 @@ fetchMovieData(idOfTheSearchedMovie);
 //fetch movie data from url movie id
 async function fetchMovieData(idOfTheSearchedMovie){
     console.log(idOfTheSearchedMovie);
-    const response = await fetch(`http://www.omdbapi.com/?i=${idOfTheSearchedMovie}&apikey=fc1fef96`);
+    const response = await fetch(`https://www.omdbapi.com/?i=${idOfTheSearchedMovie}&apikey=fc1fef96`);
     const movieData = await response.json();
     addMovieDetailsToDom(movieData);
 }
