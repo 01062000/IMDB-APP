@@ -226,3 +226,19 @@
     display: inline-grid;
   }
 }
+
+@media screen and (max-width: 645px) {
+  .movie_desc {
+    width: 80%;
+  }
+  .movie_header h2{
+    font-size: 18px;
+  padding: 20px;
+  width: 350px;
+  }
+}
+@media screen and (max-width: 345px) {
+  .movie_desc {
+    width: 70%;
+  }
+}
